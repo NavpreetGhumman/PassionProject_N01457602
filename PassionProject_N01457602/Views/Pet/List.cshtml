@@ -1,0 +1,63 @@
+﻿@model IEnumerable<PassionProject_N01457602.Models.PetDto>
+
+@{
+    ViewBag.Title = "List";
+}
+
+<h2>List</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.PetName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PetColour)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PetAge)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PetBreed)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PetHeight)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PetLocation)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.PetName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PetColour)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PetAge)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PetBreed)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PetHeight)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PetLocation)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.PetID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.PetID }) |
+            @Html.ActionLink("Delete", "DeleteConfirm", new { id=item.PetID })
+        </td>
+    </tr>
+}
+
+</table>

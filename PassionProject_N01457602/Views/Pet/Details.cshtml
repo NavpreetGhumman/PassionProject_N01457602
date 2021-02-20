@@ -1,0 +1,75 @@
+﻿@model PassionProject_N01457602.Models.ViewModels.ShowPet
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <div>@Html.ActionLink("Delete", "DeleteConfirm", new { id = Model.pet.PetID })</div>
+    <hr />
+    <dl class="dl-horizontal">
+
+
+        <dt>
+            @Html.DisplayNameFor(model => model.pet.PetName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.pet.PetName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.pet.PetColour)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.pet.PetColour)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.pet.PetAge)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.pet.PetAge)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.pet.PetBreed)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.pet.PetBreed)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.pet.PetHeight)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.pet.PetHeight)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.pet.PetLocation)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.pet.PetLocation)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.customer.CustomerName)
+        </dt>
+        <dd>
+            @Html.ActionLink(Model.customer.CustomerName, "Details", "Customer", new { id = Model.customer.CustomerID }, new { })
+           
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.pet.PetID }) |
+    @Html.ActionLink("Back to List", "List")
+</p>
