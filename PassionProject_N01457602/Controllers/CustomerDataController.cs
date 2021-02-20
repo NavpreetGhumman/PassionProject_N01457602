@@ -173,7 +173,7 @@ namespace PassionProject_N01457602.Controllers
         /// <param name="id">The id of the Customer to delete.</param>
         /// <returns>200 if successful. 404 if not successful.</returns>
         /// <example>
-        /// POST: api/CustomerData/DeleteCustomer/5
+        /// POST: api/CustomerData/DeleteCustomer/2
         /// </example>
         [HttpPost]
         public IHttpActionResult DeleteCustomer(int id)
