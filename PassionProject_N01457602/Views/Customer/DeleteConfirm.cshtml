@@ -1,7 +1,7 @@
 ﻿@model PassionProject_N01457602.Models.CustomerDto
 
 @{
-    ViewBag.Title = "Delete";
+    ViewBag.Title = "DeleteConfirm";
 }
 
 <h2>Delete</h2>
@@ -37,7 +37,7 @@
 
     </dl>
 
-    @using (Html.BeginForm()) {
+    @using (Html.BeginForm("Delete", "Customer", new { id = Model.CustomerID })) {
         @Html.AntiForgeryToken()
 
         <div class="form-actions no-color">

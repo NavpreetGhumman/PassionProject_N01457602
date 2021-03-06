@@ -183,8 +183,7 @@
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\CustomerController.cs" />
     <Compile Include="Controllers\CustomerDataController.cs" />
-    <Compile Include="Controllers\EmployeeController.cs" />
-    <Compile Include="Controllers\EmployeeDataController.cs" />
+    <Compile Include="Controllers\EmployeesController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\PetController.cs" />
@@ -256,8 +255,9 @@
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\Pet.cs" />
     <Compile Include="Models\ViewModels\ShowCustomer.cs" />
-    <Compile Include="Models\ViewModels\UpdatePet.cs" />
     <Compile Include="Models\ViewModels\ShowPet.cs" />
+    <Compile Include="Models\ViewModels\UpdateCustomer.cs" />
+    <Compile Include="Models\ViewModels\UpdatePet.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
@@ -266,6 +266,14 @@
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\Images\105992231-1561667465295gettyimages-521697453.jpeg" />
+    <Content Include="Content\Images\bruce-galpin-h7oZAHnS9_E-unsplash.jpg" />
+    <Content Include="Content\Images\download.jfif" />
+    <Content Include="Content\Images\karsten-winegeart-oU6KZTXhuvk-unsplash.jpg" />
+    <Content Include="Content\Images\mathilde-langevin-wlGOlYuKvz4-unsplash.jpg" />
+    <Content Include="Content\Images\mathilde-langevin-YDruQ9krBXI-unsplash.jpg" />
+    <Content Include="Content\Images\olia-nayda-f6v_Q0WXEK8-unsplash.jpg" />
+    <Content Include="Content\Images\roberto-nickson--s5WfAx74fM-unsplash.jpg" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -319,10 +327,8 @@
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\Pet\List.cshtml" />
     <Content Include="Views\Customer\List.cshtml" />
-    <Content Include="Views\Employee\List.cshtml" />
     <Content Include="Views\Pet\Details.cshtml" />
     <Content Include="Views\Pet\Error.cshtml" />
-    <Content Include="Views\Pet\Edit.cshtml" />
     <Content Include="Views\Pet\DeleteConfirm.cshtml" />
     <Content Include="Views\Pet\Create.cshtml" />
     <Content Include="Views\Customer\Details.cshtml" />
@@ -330,6 +336,12 @@
     <Content Include="Views\Customer\Error.cshtml" />
     <Content Include="Views\Customer\DeleteConfirm.cshtml" />
     <Content Include="Views\Customer\Create.cshtml" />
+    <Content Include="Views\Employees\Create.cshtml" />
+    <Content Include="Views\Employees\Delete.cshtml" />
+    <Content Include="Views\Employees\Details.cshtml" />
+    <Content Include="Views\Employees\Edit.cshtml" />
+    <Content Include="Views\Employees\Index.cshtml" />
+    <Content Include="Views\Pet\Edit.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

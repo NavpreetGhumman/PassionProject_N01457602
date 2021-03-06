@@ -1,4 +1,4 @@
-﻿@model PassionProject_N01457602.Models.ViewModels.UpdatePet
+﻿@model PassionProject_N01457602.Models.PetDto
 
 @{
     ViewBag.Title = "Edit";
@@ -14,63 +14,57 @@
         <h4>Pet</h4>
         <hr />
         @Html.ValidationSummary(true, "", new { @class = "text-danger" })
-        @Html.HiddenFor(model => model.pet.PetID)
+        @Html.HiddenFor(model => model.PetID)
 
         <div class="form-group">
-            @Html.LabelFor(model => model.pet.PetName, htmlAttributes: new { @class = "control-label col-md-2" })
+            @Html.LabelFor(model => model.PetName, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.EditorFor(model => model.pet.PetName, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.pet.PetName, "", new { @class = "text-danger" })
+                @Html.EditorFor(model => model.PetName, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.PetName, "", new { @class = "text-danger" })
             </div>
         </div>
 
         <div class="form-group">
-            @Html.LabelFor(model => model.pet.PetColour, htmlAttributes: new { @class = "control-label col-md-2" })
+            @Html.LabelFor(model => model.PetColour, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.EditorFor(model => model.pet.PetColour, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.pet.PetColour, "", new { @class = "text-danger" })
+                @Html.EditorFor(model => model.PetColour, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.PetColour, "", new { @class = "text-danger" })
             </div>
         </div>
 
         <div class="form-group">
-            @Html.LabelFor(model => model.pet.PetAge, htmlAttributes: new { @class = "control-label col-md-2" })
+            @Html.LabelFor(model => model.PetAge, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.EditorFor(model => model.pet.PetAge, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.pet.PetAge, "", new { @class = "text-danger" })
+                @Html.EditorFor(model => model.PetAge, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.PetAge, "", new { @class = "text-danger" })
             </div>
         </div>
 
         <div class="form-group">
-            @Html.LabelFor(model => model.pet.PetBreed, htmlAttributes: new { @class = "control-label col-md-2" })
+            @Html.LabelFor(model => model.PetBreed, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.EditorFor(model => model.pet.PetBreed, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.pet.PetBreed, "", new { @class = "text-danger" })
+                @Html.EditorFor(model => model.PetBreed, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.PetBreed, "", new { @class = "text-danger" })
             </div>
         </div>
 
         <div class="form-group">
-            @Html.LabelFor(model => model.pet.PetHeight, htmlAttributes: new { @class = "control-label col-md-2" })
+            @Html.LabelFor(model => model.PetHeight, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.EditorFor(model => model.pet.PetHeight, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.pet.PetHeight, "", new { @class = "text-danger" })
+                @Html.EditorFor(model => model.PetHeight, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.PetHeight, "", new { @class = "text-danger" })
             </div>
         </div>
 
         <div class="form-group">
-            @Html.LabelFor(model => model.pet.PetLocation, htmlAttributes: new { @class = "control-label col-md-2" })
+            @Html.LabelFor(model => model.PetLocation, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.EditorFor(model => model.pet.PetLocation, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.pet.PetLocation, "", new { @class = "text-danger" })
+                @Html.EditorFor(model => model.PetLocation, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.PetLocation, "", new { @class = "text-danger" })
             </div>
         </div>
 
-        <div class="form-group">
-            @Html.LabelFor(model => model.pet.CustomerID, "CustomerID", htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.DropDownList("CustomerID", null, htmlAttributes: new { @class = "form-control" })
-                @Html.ValidationMessageFor(model => model.pet.CustomerID, "", new { @class = "text-danger" })
-            </div>
-        </div>
+        
 
         <div class="form-group">
             <div class="col-md-offset-2 col-md-10">

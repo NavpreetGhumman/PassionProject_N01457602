@@ -41,7 +41,7 @@ namespace PassionProject_N01457602.Controllers
             public IHttpActionResult GetCustomers()
             {
                 List<Customer> Customers = db.Customers.ToList();
-                List<CustomerDto>CustomerDtos = new List<CustomerDto> { };
+                List<CustomerDto> CustomerDtos = new List<CustomerDto> { };
 
                 //Here you can choose which information is exposed to the API
                 foreach (var Customer in Customers)

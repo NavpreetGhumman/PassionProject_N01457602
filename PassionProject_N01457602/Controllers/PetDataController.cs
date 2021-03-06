@@ -20,7 +20,7 @@ namespace PassionProject_N01457602.Controllers
     {
         //This variable is our database access point
         private ApplicationDbContext db = new ApplicationDbContext();
-        
+
         //This code is mostly scaffolded from the base models and database context
         //New > WebAPIController with Entity Framework Read/Write Actions
         //Choose model "Pet"
@@ -184,6 +184,10 @@ namespace PassionProject_N01457602.Controllers
             return StatusCode(HttpStatusCode.NoContent);
         }
 
+
+       
+
+
         /// <summary>
         /// Adds a pet to the database.
         /// </summary>
@@ -209,7 +213,7 @@ namespace PassionProject_N01457602.Controllers
             return Ok(pet.PetID);
         }
 
-        
+
         /// <summary>
         /// Deletes a pet in the database
         /// </summary>

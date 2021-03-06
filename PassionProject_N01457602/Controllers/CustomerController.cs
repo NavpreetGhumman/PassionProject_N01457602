@@ -61,15 +61,15 @@ namespace PassionProject_N01457602.Controllers
         {
             ShowCustomer ViewModel = new ShowCustomer();
             
-            string url = "customerdata/findteam/" + id ;
+            string url = "customerdata/findcustomer/" + id ;
             HttpResponseMessage response = client.GetAsync(url).Result;
-            Debug.WriteLine("hello");
+            
             //Can catch the status code (200 OK, 301 REDIRECT), etc.
             //Debug.WriteLine(response.StatusCode);
             if (response.IsSuccessStatusCode)
             {
-                
-                //Put data into Team data transfer object
+                Debug.WriteLine("hello");
+                //Put data into Customer data transfer object
                 CustomerDto SelectedCustomer = response.Content.ReadAsAsync<CustomerDto>().Result;
                 ViewModel.customer = SelectedCustomer;
                 
@@ -124,7 +124,7 @@ namespace PassionProject_N01457602.Controllers
             //Debug.WriteLine(response.StatusCode);
             if (response.IsSuccessStatusCode)
             {
-                //Put data into Team data transfer object
+                //Put data into Customer  data transfer object
                 CustomerDto SelectedCustomer = response.Content.ReadAsAsync<CustomerDto>().Result;
                 return View(SelectedCustomer);
             }
@@ -140,7 +140,7 @@ namespace PassionProject_N01457602.Controllers
         public ActionResult Edit(int id, Customer CustomerInfo)
         {
             Debug.WriteLine(CustomerInfo.CustomerName);
-            string url = "teamdata/updateteam/" + id;
+            string url = "Customerdata/updatecustomer/" + id;
             Debug.WriteLine(jss.Serialize(CustomerInfo));
             HttpContent content = new StringContent(jss.Serialize(CustomerInfo));
             content.Headers.ContentType = new MediaTypeHeaderValue("application/json");
@@ -166,7 +166,7 @@ namespace PassionProject_N01457602.Controllers
             //Debug.WriteLine(response.StatusCode);
             if (response.IsSuccessStatusCode)
             {
-                //Put data into Team data transfer object
+                //Put data into Customer data transfer object
                 CustomerDto SelectedCustomer = response.Content.ReadAsAsync<CustomerDto>().Result;
                 return View(SelectedCustomer);
             }

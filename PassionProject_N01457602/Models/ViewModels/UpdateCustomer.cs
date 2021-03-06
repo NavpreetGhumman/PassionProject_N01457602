@@ -5,9 +5,9 @@ using System.Web;
 
 namespace PassionProject_N01457602.Models.ViewModels
 {
-    public class UpdatePet
+    public class UpdateCustomer
     {
-        public PetDto pet { get; set; }
-        public IEnumerable<CustomerDto> allcustomers { get; set; }
+        //base information about the customer
+        public CustomerDto customer { get; set; }
     }
 }

@@ -87,7 +87,7 @@ namespace PassionProject_N01457602.Controllers
         // GET: Pet/Create
         public ActionResult Create()
         {
-            
+
             return View();
         }
 
@@ -115,33 +115,21 @@ namespace PassionProject_N01457602.Controllers
             {
                 return RedirectToAction("Error");
             }
-         }
+        }
 
 
-
-
-        // GET: Pet/Edit/5
+         // GET: Pet/Edit/5
         public ActionResult Edit(int id)
         {
-            UpdatePet ViewModel = new UpdatePet();
-
-            string url = "petdata/findplayer/" + id;
+            string url = "petdata/findpet/" + id;
             HttpResponseMessage response = client.GetAsync(url).Result;
             //Can catch the status code (200 OK, 301 REDIRECT), etc.
             //Debug.WriteLine(response.StatusCode);
             if (response.IsSuccessStatusCode)
             {
-                //Put data into pet data transfer object
+                //Put data into Customer data transfer object
                 PetDto SelectedPet = response.Content.ReadAsAsync<PetDto>().Result;
-                ViewModel.pet = SelectedPet;
-
-                //get information about customer which bought that pet.
-                url = "customerdata/getcustomers";
-                response = client.GetAsync(url).Result;
-                IEnumerable<CustomerDto> PotentialCustomers = response.Content.ReadAsAsync<IEnumerable<CustomerDto>>().Result;
-                ViewModel.allcustomers = PotentialCustomers;
-
-                return View(ViewModel);
+                return View(SelectedPet);
             }
             else
             {
@@ -150,23 +138,20 @@ namespace PassionProject_N01457602.Controllers
         }
 
 
-
-        // POST: Player/Edit/5
+        // POST: Pet/Edit/5
         [HttpPost]
         [ValidateAntiForgeryToken()]
         public ActionResult Edit(int id, Pet PetInfo)
         {
             Debug.WriteLine(PetInfo.PetName);
-            string url = "playerdata/updateplayer/" + id;
+            string url = "petdata/updatepet/" + id;
             Debug.WriteLine(jss.Serialize(PetInfo));
             HttpContent content = new StringContent(jss.Serialize(PetInfo));
             content.Headers.ContentType = new MediaTypeHeaderValue("application/json");
             HttpResponseMessage response = client.PostAsync(url, content).Result;
             Debug.WriteLine(response.StatusCode);
             if (response.IsSuccessStatusCode)
-            {
-
-                //Send over image data for player
+            { 
 
                 response = client.PostAsync(url, content).Result;
 
@@ -188,7 +173,7 @@ namespace PassionProject_N01457602.Controllers
             //Debug.WriteLine(response.StatusCode);
             if (response.IsSuccessStatusCode)
             {
-                //Put data into player data transfer object
+                //Put data into pet data transfer object
                 PetDto SelectedPet = response.Content.ReadAsAsync<PetDto>().Result;
                 return View(SelectedPet);
             }

@@ -27,6 +27,8 @@ namespace PassionProject_N01457602.Models
         public int PetHeight { get; set; }
 
         public string PetLocation { get; set; }
+        
+
         //A player plays for one team
         [ForeignKey("Customer")]
         public int CustomerID { get; set; }
@@ -53,6 +55,7 @@ namespace PassionProject_N01457602.Models
         public int PetHeight { get; set; }
         [DisplayName("Location")]
         public string PetLocation { get; set; }
+        
         [DisplayName("Customer ID ")]
         public int CustomerID { get; set; }
     }
