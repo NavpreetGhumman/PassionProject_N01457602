@@ -1,25 +1,7 @@
 # Assignment Name: MVC passion project
 # Name: Navpreet Kaur
 # Student Number: N01457602
-# Tasks
-- [x] Create Models
-*Pet.cs
-*Customer.cs
-*Employee.cs
-- [x] Create Controllers
-*PetDataController
-*PetController
-*CustomerDataController
-*CustomerControllere
-*EmployeeDataController
-*EmployeeController
-- [x] Create Views
-*Create
-*Edit
-*Delete
-*Details
 
-## Learning Curve and challengers
- 
-
-## Resourses
+Adopt A Pet
+This is my Pet Data Manager Web application that keep record which pet is bought by which customer.
+An admin can add, edit and delete pet data and customer data.
